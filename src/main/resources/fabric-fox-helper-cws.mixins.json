@@ -9,7 +9,9 @@
     "bukkit.MixinSimpleCommandMap",
     "minecraft.AbstractContainerMenuMixin",
     "minecraft.BlockEntityTypeMixin",
-    "minecraft.BuiltInRegistriesMixin"
+    "minecraft.BuiltInRegistriesMixin",
+    "minecraft.ChatDecoratorMixin",
+    "paper.ImprovedChatDecoratorMixin"
   ],
   "injectors": {
     "defaultRequire": 1

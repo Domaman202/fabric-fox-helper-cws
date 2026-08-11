@@ -5,6 +5,7 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.MethodNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
@@ -41,7 +42,15 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void preApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
-
+        if (mixinClassName.equals("ru.cws.helper.fox.fabric.mixin.minecraft.ChatDecoratorMixin")) {
+            MethodNode method = targetClass.methods.stream().filter(it -> it.name.equals("decorate") && it.desc.equals("(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/network/chat/Component;)Ljava/util/concurrent/CompletableFuture;")).findFirst().orElseThrow();
+            targetClass.methods.remove(method);
+            return;
+        }
+        if (mixinClassName.equals("ru.cws.helper.fox.fabric.mixin.paper.ImprovedChatDecoratorMixin")) {
+            MethodNode method = targetClass.methods.stream().filter(it -> it.name.equals("decorate") && it.desc.equals("(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/network/chat/Component;)Ljava/util/concurrent/CompletableFuture;")).findFirst().orElseThrow();
+            targetClass.methods.remove(method);
+        }
     }
 
     @Override
@@ -97,6 +106,7 @@ public class MixinPlugin implements IMixinConfigPlugin {
                 methodVisitor.visitMaxs(3, 3);
                 methodVisitor.visitEnd();
             }
+            return;
         }
     }
 }
