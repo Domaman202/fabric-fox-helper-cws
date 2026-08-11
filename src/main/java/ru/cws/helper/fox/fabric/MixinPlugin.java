@@ -46,7 +46,7 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
-        if (mixinClassName.equals("ru.cws.helper.fox.fabric.mixin.BlockEntityTypeMixin")) {
+        if (mixinClassName.equals("ru.cws.helper.fox.fabric.mixin.minecraft.BlockEntityTypeMixin")) {
             {
                 MethodVisitor methodVisitor;
                 methodVisitor = targetClass.visitMethod(ACC_PUBLIC, "<init>", "(Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier;Ljava/util/Set;)V", "(Lnet/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier<+TT;>;Ljava/util/Set<Lnet/minecraft/world/level/block/Block;>;Ljava/lang/String;)V", null);

@@ -4,10 +4,12 @@
   "compatibilityLevel": "JAVA_21",
   "plugin": "ru.cws.helper.fox.fabric.MixinPlugin",
   "mixins": [
-    "AbstractContainerMenuMixin",
-    "BlockEntityTypeMixin",
-    "CraftBlockStates$DefaultFactoryMixin",
-    "MixinSimpleCommandMap"
+    "bukkit.BukkitEntityTypeMixin",
+    "bukkit.CraftBlockStates$DefaultFactoryMixin",
+    "bukkit.MixinSimpleCommandMap",
+    "minecraft.AbstractContainerMenuMixin",
+    "minecraft.BlockEntityTypeMixin",
+    "minecraft.BuiltInRegistriesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

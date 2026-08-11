@@ -1,4 +1,4 @@
-package ru.cws.helper.fox.fabric.mixin;
+package ru.cws.helper.fox.fabric.mixin.minecraft;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.world.SimpleContainer;
@@ -15,10 +15,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+/**
+ * @author cardboard
+ */
 @Mixin(AbstractContainerMenu.class)
 public class AbstractContainerMenuMixin {
     /**
-     * @author DomamaN202
+     * @author cardboard
      * @reason Z
      */
     @Dynamic
