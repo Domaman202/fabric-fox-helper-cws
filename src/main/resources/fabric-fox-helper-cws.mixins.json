@@ -8,7 +8,6 @@
     "bukkit.CraftBlockStates$DefaultFactoryMixin",
     "bukkit.MixinSimpleCommandMap",
     "minecraft.AbstractContainerMenuMixin",
-    "minecraft.BlockEntityTypeMixin",
     "minecraft.BuiltInRegistriesMixin",
     "minecraft.ChatDecoratorMixin",
     "paper.ImprovedChatDecoratorMixin"
