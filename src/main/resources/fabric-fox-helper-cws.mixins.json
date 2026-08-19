@@ -10,6 +10,7 @@
     "minecraft.AbstractContainerMenuMixin",
     "minecraft.BuiltInRegistriesMixin",
     "minecraft.ChatDecoratorMixin",
+    "minecraft.ContainerMixin",
     "paper.ImprovedChatDecoratorMixin"
   ],
   "injectors": {
